@@ -1,0 +1,17 @@
+{
+  "name": "linear-automation",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo \"Vercel will build this\"",
+    "start": "vercel dev"
+  },
+  "dependencies": {
+    "@linear/sdk": "^2.0.0",
+    "@vercel/node": "^3.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}
