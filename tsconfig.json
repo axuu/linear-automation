@@ -9,5 +9,5 @@
     "resolveJsonModule": true,
     "outDir": ".vercel_build"
   },
-  "include": ["api/**/*.ts"]
+  "include": ["api/**/*.ts", "scripts/**/*.ts"]
 }

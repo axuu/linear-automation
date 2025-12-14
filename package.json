@@ -5,13 +5,15 @@
   "scripts": {
     "dev": "vercel dev",
     "build": "echo \"Vercel will build this\"",
-    "start": "vercel dev"
+    "start": "vercel dev",
+    "archive": "npx tsx scripts/archive-cli.ts"
   },
   "dependencies": {
     "@linear/sdk": "^2.0.0",
     "@vercel/node": "^3.0.0"
   },
   "devDependencies": {
+    "tsx": "^4.7.0",
     "typescript": "^5.6.0"
   }
 }
