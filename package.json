@@ -1,0 +1,15 @@
+{
+  "name": "linear-automation",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "archive": "bun scripts/archive.ts"
+  },
+  "dependencies": {
+    "@linear/sdk": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "typescript": "^5.6.0"
+  }
+}

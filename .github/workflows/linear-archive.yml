@@ -1,0 +1,28 @@
+name: Linear Archive
+
+on:
+  schedule:
+    - cron: "0 2 * * *"
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    env:
+      LINEAR_API_KEY: ${{ secrets.LINEAR_API_KEY }}
+      ARCHIVE_AFTER_DAYS: ${{ vars.ARCHIVE_AFTER_DAYS }}
+      LINEAR_TEAM_KEY: ${{ vars.LINEAR_TEAM_KEY }}
+      DRY_RUN: ${{ vars.DRY_RUN || 'false' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Run archive job
+        run: bun run archive
